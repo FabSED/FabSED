@@ -9,13 +9,11 @@ router.get('/', (req, res)=> {
     res.render('login')
 })
 
-router.post('/login', (req, res, next) => {
-	// validate input ?
-	// authenticate user
-	passport.authenticate("local", {
-		successRedirect: "/dashboard/user",
-		failureRedirect: "/fail",
-	})(req, res, next);
-})
+router.post('/login',passport.authenticate('local', { failureRedirect: '/', failureMessage: true }),(req, res) => {
+    console.log(req.user.role);
+    console.log("redirecting to", `/dashboard/${req.user.role}`);
+    res.redirect(`/dashboard/${req.user.role}`)
+}	
+)
 
 module.exports = router;
