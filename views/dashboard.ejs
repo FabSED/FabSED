@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MoED Dashboard</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav me-auto">
+        
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<table class="table table-hover">
+	<thead>
+		<tr class="table-active">
+			<th scope="col">Request</th>
+			<th scope="col">Status</th>
+			<th scope="col">Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% for(request of data) { %>
+		<tr>
+			<th scope="row"><a href="/request/<%=request.id%>"><%= request.id %></a></th>
+            <td><%= request.status %></td>
+			<td><%= request.date_issued%></td>
+		</tr>
+		<% } %>
+	</tbody>
+</table>
