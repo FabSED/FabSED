@@ -41,7 +41,7 @@ const PORT = process.env.PORT || 5000;
 	try {
 		// app.listen(PORT, () => console.log(`server listening on port ${PORT}`));
 		console.log("attempting connection to database");
-		connectDB(process.env.MONGO_URI).then(() => {
+		connectDB().then(() => {
 			console.log("database connected successfully");
 			app.listen(PORT, () => console.log(`server listening on port ${PORT}`));
 		});
