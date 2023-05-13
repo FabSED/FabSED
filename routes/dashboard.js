@@ -5,7 +5,7 @@ const router = express.Router();
 const data = require("../fake_requests.json");
 
 router.get("/moed", (req, res) => {
-	res.render("dashboard", { data });
+	res.render("dashboards/moed", { data });
 });
 
 router.get("/mofa", (req, res) => {
