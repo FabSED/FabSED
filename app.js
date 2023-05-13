@@ -4,6 +4,9 @@ const connectDB = require("./config/db");
 const app = express();
 require("dotenv").config();
 
+// routers
+const loginRoute = require('./routes/login');
+const dashboardRoute = require('./routes/dashboard')
 // ejs configs
 app.use(expressLayouts);
 app.set("view engine", "ejs");
