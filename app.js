@@ -4,6 +4,7 @@ const connectDB = require("./config/db");
 const app = express();
 const session = require("express-session");
 const passport = require("passport");
+const flash = require('connect-flash');
 require("dotenv").config();
 
 // routers
@@ -26,8 +27,19 @@ app.use(
 		saveUninitialized: true,
 	})
 );
+
 app.use(passport.initialize());
 app.use(passport.session());
+
+// flash messaging
+app.use(flash())
+
+// global variables
+app.use((req, res, next) => {
+	res.locals.successMsg = req.flash("successMsg");
+	res.locals.errorMsg = req.flash("errorMsg");
+	next()
+})
 
 // ROUTES
 app.use("/static", express.static("views"));
