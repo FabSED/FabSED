@@ -5,7 +5,7 @@
 			<p class="lead">SEDOB login portal</p>
 			<%- include('partials/messages.ejs') %>
 			<form action="/login" method="post">
-				<div class="form-group has-danger mb-3">
+				<div class="form-group mb-3">
 					<label for="email">Email:</label>
 					<input
 						type="email"
@@ -13,19 +13,19 @@
 						email="email"
 						name="email"
 						required
-						class="form-control is-invalid" id="email-input" oninput="this.classList.replace('is-invalid', 'is-valid')"
+						class="form-control"
                         placeholder="Enter Email"
 						value="<%= typeof email !='undefined' ? email: '' %>"/>
 				</div>
 
-				<div class="form-group has-danger mb-3">
+				<div class="form-group mb-3">
 					<label for="password">Password:</label>
 					<input
 						type="password"
-						
+						id="password"
 						name="password"
 						required
-						class="form-control is-invalid" id="password-input" oninput="this.classList.replace('is-invalid', 'is-valid')"
+						class="form-control"
                         placeholder="Enter Password"
 						value="<%= typeof password !='undefined' ? password: '' %>"/>
 				</div>

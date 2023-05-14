@@ -8,10 +8,17 @@
 <% } %> <% } %>
 
 <% if (errorMsg != '') { %>
-  <div class="alert alert-dismissible alert-danger">
+  <div class="alert alert-dismissible alert-danger fade show">
 	<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 	<strong><%= errorMsg %></strong>
 </div>
 <% } %>
 
 
+
+<% if (successMsg != '') { %>
+  <div class="alert alert-dismissible alert-success fade show">
+	<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+	<strong><%= successMsg %></strong>
+</div>
+<% } %>
