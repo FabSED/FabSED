@@ -3,8 +3,9 @@
 const express = require("express");
 const router = express.Router();
 const data = require("../fake_requests.json");
+const { ensureAuthenticated } = require("../config/auth");
 
-router.get("/moed", (req, res) => {
+router.get("/moed", ensureAuthenticated,(req, res) => {
 	res.render("dashboards/moed", { data });
 });
 
@@ -16,8 +17,8 @@ router.get("/mod", (req, res) => {
     res.send("ministry of defense dashboard")
 });
 
-router.get("/user", (req, res) => {
-	res.send("user dashboard");
+router.get("/user", ensureAuthenticated, (req, res) => {
+	res.render("dashboards/user")
 });
 
 module.exports = router;

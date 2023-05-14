@@ -17,6 +17,8 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 
 // session middleware
+// passport configs
+require("./config/passport")(passport);
 app.use(
 	session({
 		secret: "secret",
@@ -24,9 +26,6 @@ app.use(
 		saveUninitialized: true,
 	})
 );
-
-// passport configs
-require("./config/passport")(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 

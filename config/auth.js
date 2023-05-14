@@ -5,6 +5,7 @@ module.exports = {
 		if (req.isAuthenticated()) {
 			return next();
 		}
+		console.log("[auth.js] not authenticated, redirecting ...");
 		res.redirect("/");
 	},
 	forwardAuthenticated: (req, res, next) =>  {

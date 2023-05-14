@@ -12,7 +12,7 @@ module.exports = (passport) => {
 			(email, password, done) => {
 				// find user
 				User.findOne({ email }).then((user) => {
-                    console.log("user", user);
+					console.log("user", user);
 					if (!user)
 						return done(null, false, { message: "email not registered" });
 					if (password !== user.password)
@@ -22,18 +22,32 @@ module.exports = (passport) => {
 			}
 		)
 	);
-	
-    // copied from docs
-    passport.serializeUser(function (user, cb) {
-			process.nextTick(function () {
-				cb(null, { id: user.id, username: user.username });
-			});
-		});
 
-	passport.deserializeUser(function (user, cb) {
-		process.nextTick(function () {
-			return cb(null, user);
-		});
+	// copied from docs
+	// passport.serializeUser(function (user, cb) {
+	// 		process.nextTick(function () {
+	// 			cb(null, { id: user.id, username: user.email });
+	// 		});
+	// 	});
+
+	// passport.deserializeUser(function (user, cb) {
+	// 	process.nextTick(function () {
+	// 		return cb(null, user);
+	// 	});
+	// });
+	// serialize user
+	passport.serializeUser(function (user, done) {
+		done(null, user.id);
+	});
+
+	// deserialize user
+	passport.deserializeUser(async function (id, done) {
+		try {
+			const user = await User.findById(id);
+			done(null, user);
+		} catch (err) {
+			done(err);
+		}
 	});
 };
 
