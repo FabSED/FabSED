@@ -23,19 +23,6 @@ module.exports = (passport) => {
 		)
 	);
 
-	// copied from docs
-	// passport.serializeUser(function (user, cb) {
-	// 		process.nextTick(function () {
-	// 			cb(null, { id: user.id, username: user.email });
-	// 		});
-	// 	});
-
-	// passport.deserializeUser(function (user, cb) {
-	// 	process.nextTick(function () {
-	// 		return cb(null, user);
-	// 	});
-	// });
-	// serialize user
 	passport.serializeUser(function (user, done) {
 		done(null, user.id);
 	});
