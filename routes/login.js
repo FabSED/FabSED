@@ -29,7 +29,7 @@ router.get("/logout", (req, res) => {
 		if (err) {
 			return next(err);
 		}
-		req.flash("successMsg", "successfully logged out");
+		req.flash("successMsg", "logged out");
 		res.redirect("/");
 	});
 });
