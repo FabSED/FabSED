@@ -56,7 +56,6 @@
 }
 
 body {
-  direction: rtl;
   font-family: 'Tajawal';
 }
 
@@ -65,6 +64,8 @@ body {
   height: 100vh;
   background-image: url(../../assets/img/world-map.jpg);
   background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
 }
 
 #overlay {
@@ -76,7 +77,7 @@ body {
   right: 0;
   left: 0;
   z-index: 0;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.5);
   cursor: pointer;
 }
 
