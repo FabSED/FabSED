@@ -6,7 +6,8 @@ const data = require("../fake_requests.json");
 const { ensureAuthenticated } = require("../config/auth");
 
 router.get("/moed", ensureAuthenticated,(req, res) => {
-	res.render("dashboards/moed", { data });
+	// change to dashboards/moed once done
+	res.render("user-dashboard.ejs", {layout: false});
 });
 
 router.get("/mofa", (req, res) => {

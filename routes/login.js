@@ -7,7 +7,7 @@ const User = require("../models/User");
 const validate_login_form = require("../middleware/validate_login_form");
 
 router.get("/", (req, res) => {
-	res.render("login");
+	res.render("login", { layout: false });
 });
 
 router.post(
