@@ -86,7 +86,11 @@ a.dropdown-item.d-flex.align-items-center {
   text-align: right;
 }
 
-.fas.fa-tachometer-alt {
+.fas {
   padding-left: 5px;
+}
+
+.accepted-text {
+  color: #009600 !important;
 }
 

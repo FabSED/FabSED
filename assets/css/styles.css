@@ -34,7 +34,7 @@ body {
   font-size: var(--bs-icon-size);
   width: calc(var(--bs-icon-size) * 2);
   height: calc(var(--bs-icon-size) * 2);
-  color: var(--bs-primary);
+  color: var(--bs-black);
 }
 
 .bs-icon-xs {
@@ -61,16 +61,16 @@ body {
 
 .bs-icon.bs-icon-primary {
   color: var(--bs-white);
-  background: var(--bs-primary);
+  background: var(--bs-black);
 }
 
 .bs-icon.bs-icon-primary-light {
-  color: var(--bs-primary);
+  color: var(--bs-black);
   background: rgba(var(--bs-primary-rgb), .2);
 }
 
 .bs-icon.bs-icon-semi-white {
-  color: var(--bs-primary);
+  color: var(--bs-black);
   background: rgba(255, 255, 255, .5);
 }
 
@@ -149,3 +149,21 @@ form {
   border-radius: .375rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+ul#accordionSidebar {
+  padding-right: 0px;
+}
+
+.nav-link {
+  color: black;
+}
+
+#ipi-table > thead > tr, #ipi-table > thead > tr > td {
+  background-color: black;
+}
+
+.page-link.active, .active > .page-link {
+  background-color: black;
+  border-color: black;
+}
+
