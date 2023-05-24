@@ -12,12 +12,15 @@ cryptogen generate --config=./crypto-config.yaml
   
 3- Create the channel artifacts now using these two commands:
 ```bash
-configtxgen -profile OrdererGenesis  -outputBlock ./channel-artifacts/genesis.block -channelID mychannel -asOrg Org1MSP -asOrg Org2MSP   // this will create the genesis block 
-configtxgen -profile Test -channelID mychannel  -outputCreateChannelTx ./channel-artifacts/mychannel.tx // this will create the channel transaction file.
+# this will create the genesis block
+configtxgen -profile OrdererGenesis  -outputBlock ./channel-artifacts/genesis.block -channelID mychannel -asOrg Org1MSP -asOrg Org2MSP    
+
+# this will create the channel transaction file.
+configtxgen -profile Test -channelID mychannel  -outputCreateChannelTx ./channel-artifacts/mychannel.tx
 ```
 
 4- Bring the containers UP using 
 ```bash
-docker-compose up -d // -d in detached mode
+docker-compose up -d    # -d in detached mode
 ```
 5- Enjoy !!!
