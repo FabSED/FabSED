@@ -4,7 +4,7 @@ Secure Exchange of Data over Fabric Network.
 First of all :
 1- Export all the fabric binary files (e.g: configtxgen cryptogen ) using command:
 ```bash 
-export PATH=/path/to/bin:$PATH`
+export PATH=/path/to/bin:$PATH
 ```
 
 2- Create the cryptographic materials for the project we'll use cryptogen in our case
