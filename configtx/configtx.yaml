@@ -2,7 +2,7 @@ Organizations:
   - &OrdererOrg
     Name: OrdererMSP
     ID: OrdererMSP
-    MSPDir: ${PWD}/SEDoB/organizations/ordererOrganizations/sedob.gov/orderers/orderer.sedob.gov/msp
+    MSPDir: ../organizations/ordererOrganizations/sedob.gov/orderers/orderer.sedob.gov/msp
     Policies: 
       Readers:
         Type: Signature
@@ -19,7 +19,7 @@ Organizations:
   - &Org1
     Name: Org1MSP
     ID: Org1MSP
-    MSPDir: ${PWD}/organizations/peerOrganizations/org1.sedob.gov/peers/peer0.org1.sedob.gov/msp      # important you need the path to the local MSP not the organization MSP
+    MSPDir: ../organizations/peerOrganizations/org1.sedob.gov/peers/peer0.org1.sedob.gov/msp      # important you need the path to the local MSP not the organization MSP
     # Policies defines the set of policies at this level of the config tree
     # For organization policies, their canonical path is usually
     #   /Channel/<Application|Orderer>/<OrgName>/<PolicyName>
@@ -45,7 +45,7 @@ Organizations:
   - &Org2
     Name: Org2MSP
     ID: Org2MSP
-    MSPDir: ${PWD}/organizations/peerOrganizations/org2.sedob.gov/peers/peer0.org2.sedob.gov/msp 
+    MSPDir: ../organizations/peerOrganizations/org2.sedob.gov/peers/peer0.org2.sedob.gov/msp 
     Policies: 
       Readers:
         Type: Signature
@@ -116,8 +116,8 @@ Orderer: &OrdererDefaults
     Consenters:
     - Host: orderer.sedob.gov
       Port: 7050
-      ClientTLSCert: ${PWD}/organizations/ordererOrganizations/sedob.gov/orderers/orderer.sedob.gov/tls/server.crt
-      ServerTLSCert: ${PWD}/organizations/ordererOrganizations/sedob.gov/orderers/orderer.sedob.gov/tls/server.crt
+      ClientTLSCert: ../organizations/ordererOrganizations/sedob.gov/orderers/orderer.sedob.gov/tls/server.crt
+      ServerTLSCert: ../organizations/ordererOrganizations/sedob.gov/orderers/orderer.sedob.gov/tls/server.crt
       # Options to be specified for all the etcd/raft nodes. The values here
       # are the defaults for all new channels and can be modified on a
       # per-channel basis via configuration updates.
