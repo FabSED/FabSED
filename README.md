@@ -28,10 +28,12 @@ docker-compose -f compose/compose-sedob-gov.yaml -f compose/docker/docker-compos
 ```
 5- Now let's create the application channel first let's check that we don't have any channels by typing :
 ```bash
-osnadmin channel list -o orderer.sedob.gov:7053 --ca-file $ORDERER_ROOT_CERT  --client-cert $ORDERER_TLS_SIGN_CERT --client-key $ORDERER_TLS_PRIVATE_KEY # it should give systemchannels : null, applicationCahnnels: null
-
+osnadmin channel list -o orderer.sedob.gov:7053 --ca-file $ORDERER_ROOT_CERT  --client-cert $ORDERER_ADMIN_TLS_SIGN_CERT --client-key $ORDERER_ADMIN_TLS_PRIVATE_KEY
+```
+# it should give systemchannels : null, applicationCahnnels: null
+```bash
 # this commmand created the channel called mychannel in our case- it could be any name-:
-osnadmin channel join -c $CHANNEL_NAME --config-block $BLOCKFILE -o orderer.sedob.gov:7053 --ca-file $ORDERER_ROOT_CERT  --client-cert $ORDERER_TLS_SIGN_CERT --client-key $ORDERER_TLS_PRIVATE_KEY
+osnadmin channel join -c $CHANNEL_NAME --config-block $BLOCKFILE -o orderer.sedob.gov:7053 --ca-file $ORDERER_ROOT_CERT  --client-cert $ORDERER_ADMIN_TLS_SIGN_CERT --client-key $ORDERER_ADMIN_TLS_PRIVATE_KEY
 ```
 
 6- Now if you want to invoke the chaincode on this channel follow the exact steps in the hyperledger fabric docs in how to deploy the chaincode 
