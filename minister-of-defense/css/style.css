@@ -3,14 +3,11 @@
   height: auto;
 }
 
-ul#accordionSidebar {
-  margin-top: 100px;
-}
-
 .sidebar-brand-icon {
   margin-top: 100px;
   width: 100%;
-  border-radius: 999px;;
+  border-radius: 999px;
+  background-color: #96CC22
 }
 
 input {
@@ -50,18 +47,18 @@ label.form-check-label {
 }
 
 .bg-gradient-primary {
-  background-color: #216595;
+  background-color: #96CC22;
   background-image: none;
 }
 
 .text-primary {
-  color: black !important;
+  color: #96CC22 !important;
 }
 
 .btn-primary {
   padding: 10px;
   color: #fff;
-  background-color: #216595;
+  background-color: #96CC22;
   border-radius: 999px;
 }
 
@@ -70,11 +67,11 @@ label.form-check-label {
 }
 
 .far.fa-user {
-  color: #216595;
+  color: #96CC22;
 }
 
 .dropdown .dropdown-list .dropdown-header {
-  background-color: #216595;
+  background-color: #96CC22;
 }
 
 .dropdown-header {

@@ -3,14 +3,11 @@
   height: auto;
 }
 
-ul#accordionSidebar {
-  margin-top: 100px;
-}
-
 .sidebar-brand-icon {
   margin-top: 100px;
   width: 100%;
-  border-radius: 999px;;
+  border-radius: 999px;
+  background-color: #BF2B21
 }
 
 input {
@@ -50,18 +47,18 @@ label.form-check-label {
 }
 
 .bg-gradient-primary {
-  background-color: #216595;
+  background-color: #BF2B21;
   background-image: none;
 }
 
 .text-primary {
-  color: black !important;
+  color: #BF2B21 !important;
 }
 
 .btn-primary {
   padding: 10px;
   color: #fff;
-  background-color: #216595;
+  background-color: #BF2B21;
   border-radius: 999px;
 }
 
@@ -70,11 +67,11 @@ label.form-check-label {
 }
 
 .far.fa-user {
-  color: #216595;
+  color: #BF2B21;
 }
 
 .dropdown .dropdown-list .dropdown-header {
-  background-color: #216595;
+  background-color: #BF2B21;
 }
 
 .dropdown-header {
@@ -95,6 +92,6 @@ a.dropdown-item.d-flex.align-items-center {
 }
 
 .accepted-text {
-  color: #009600 !important;
+  color: #BF2B21 !important;
 }
 

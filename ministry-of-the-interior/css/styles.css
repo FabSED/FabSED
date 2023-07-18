@@ -104,7 +104,7 @@ body {
   right: 0;
   left: 0;
   z-index: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: #BF2B21;
   cursor: pointer;
 }
 
@@ -160,12 +160,12 @@ ul#accordionSidebar {
 }
 
 #ipi-table > thead > tr, #ipi-table > thead > tr > td {
-  background-color: black;
+  background-color: #BF2B21;
 }
 
 .page-link.active, .active > .page-link {
-  background-color: black;
-  border-color: black;
+  background-color: #BF2B21;
+  border-color: #BF2B21;
 }
 
 /* ================
