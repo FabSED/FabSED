@@ -11,12 +11,12 @@ cd cryptogen
 cryptogen generate --config=./crypto-config-orderer.yaml --output=../organizations
 cryptogen generate --config=./crypto-config-org1.yaml --output=../organizations
 cryptogen generate --config=./crypto-config-org2.yaml --output=../organizations
-cd ../
+cd ../configtx
 ```
   
 2- Create the genesis block using configtx tool:
 ```bash
-configtxgen -profile TwoOrgsApplicationGenesis  -outputBlock ./channel-artifacts/genesis.block -channelID mychannel 
+configtxgen -profile TwoOrgsApplicationGenesis  -outputBlock ../channel-artifacts/genesis.block -channelID mychannel 
 ```
 3- Type in the command cli now after steps 1, 2 :
 ```bash
