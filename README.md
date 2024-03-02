@@ -30,7 +30,7 @@ docker-compose -f compose/compose-sedob-gov.yaml -f compose/docker/docker-compos
 ```bash
 osnadmin channel list -o orderer.sedob.gov:7053 --ca-file $ORDERER_ROOT_CERT  --client-cert $ORDERER_ADMIN_TLS_SIGN_CERT --client-key $ORDERER_ADMIN_TLS_PRIVATE_KEY
 ```
-# it should give systemchannels : null, applicationCahnnels: null
+***Output must be : systemchannels : null, applicationCahnnels: null***
 ```bash
 # this commmand created the channel called mychannel in our case- it could be any name-:
 osnadmin channel join -c $CHANNEL_NAME --config-block $BLOCKFILE -o orderer.sedob.gov:7053 --ca-file $ORDERER_ROOT_CERT  --client-cert $ORDERER_ADMIN_TLS_SIGN_CERT --client-key $ORDERER_ADMIN_TLS_PRIVATE_KEY
